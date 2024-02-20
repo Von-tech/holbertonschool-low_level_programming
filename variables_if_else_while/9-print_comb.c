@@ -1,31 +1,26 @@
-/*
- * File: 9-print_comb.c
- * Auth: Brennan D Baraban
- */
+Certainly! Here is a program that prints all possible combinations of single-digit numbers, adhering to the given constraints:
 
+```c
 #include <stdio.h>
 
-/**
- * main - Prints all possible combinations of single-digit numbers.
- *
- * Return: Always 0.
- */
 int main(void)
 {
-        int num;
+    int num = 0;
 
-        for (num = 0; num <= 9; num++)
+    while (num < 10)
+    {
+        putchar((num % 10) + '0');
+
+        if (num < 9)
         {
-                putchar((num % 10) + '0');
-                if (num == 9)
-                        continue;
-
-                putchar(',');
-                putchar(' ');
+            putchar(',');
+            putchar(' ');
         }
 
-        putchar('\n');
+        num++;
+    }
 
-        return (0);
+    putchar('\n');
+
+    return (0);
 }
-
