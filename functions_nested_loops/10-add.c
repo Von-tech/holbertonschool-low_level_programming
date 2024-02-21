@@ -3,8 +3,8 @@
 /**
  * add Write a function that add two integers and returns the result.
  *
- * @a: int val
- * @b: int val
+ * @a: The first integer.
+ * @b: The second integer.
  *
  * Return: Sum of a + b
  */
