@@ -2,9 +2,10 @@
 
 /**
  * _strlen_recursion - Returns the length of a string.
- * @s: The string to find the length of>
+ * @s: The string to find the length of.
  *
- * Return_ The length of the string
+ * Return:The length of the string.
+ * 0 if the string is empty.
  */
 int _strlen_recursion(char *s)
 {
