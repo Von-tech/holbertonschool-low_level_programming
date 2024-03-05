@@ -1,3 +1,3 @@
 int _putchar(char c);
-void print_name(char *name);
+int main(int argc, char *argv[])
 
