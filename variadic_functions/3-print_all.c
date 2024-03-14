@@ -3,7 +3,11 @@
 /**
  * t_char - print a character
  *@va:character
- *
+ *t_integer - print a character
+ *t_float - print a character
+ *t_string - print a character
+ *t_all - print a character
+ * 
  * Return: no return
  */
 
