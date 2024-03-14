@@ -26,7 +26,7 @@ void t_string(va_list va)
 {
 	char *s = va_arg(va, char *);
 
-	if (s == NULL) 
+	if (s == NULL)
 	{
 		printf("(nil)");
 		return;
