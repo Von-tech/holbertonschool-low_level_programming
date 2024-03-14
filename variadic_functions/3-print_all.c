@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
- *...
- *...
- *...
+ * t_char - print a character
+ *@va:character
+ *
+ * Return: no return
  */
 
 void t_char(va_list va)
