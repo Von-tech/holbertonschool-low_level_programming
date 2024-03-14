@@ -7,7 +7,7 @@
  *t_float - print a character
  *t_string - print a character
  *t_all - print a character
- * 
+ *
  * Return: no return
  */
 
