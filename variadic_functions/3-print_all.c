@@ -3,10 +3,6 @@
 /**
  * t_char - print a character
  *@va:character
- *t_integer - print a character
- *t_float - print a character
- *t_string - print a character
- *t_all - print a character
  *
  * Return: no return
  */
@@ -18,6 +14,12 @@ void t_char(va_list va)
 	printf("%c", c);
 }
 
+/**
+ * t_integer - print an integer
+ *@va:number 1
+ *
+ * Return: no return
+ */
 void t_integer(va_list va)
 {
 	int num = va_arg(va, int);
@@ -25,6 +27,12 @@ void t_integer(va_list va)
 	printf("%d", num);
 }
 
+/**
+ * t_float - print a float
+ *@va:float number
+ *
+ * Return: no return
+ */
 void t_float(va_list va)
 {
 	double f = va_arg(va, double);
@@ -32,6 +40,12 @@ void t_float(va_list va)
 	printf("%f", f);
 }
 
+/**
+ * t_string - print a string
+ *@va: pointer to string
+ *
+ * Return: no return
+ */
 void t_string(va_list va)
 {
 	char *s = va_arg(va, char *);
@@ -44,6 +58,12 @@ void t_string(va_list va)
 	printf("%s", s);
 }
 
+/**
+* print_all - prints anything
+*@format: format
+*
+* Return: no return
+*/
 void print_all(const char * const format, ...)
 {
 	types difftypes[] = {
