@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include "variadic_functions.h"
+/**
+ *...
+ *...
+ *...
+ */
 
 void t_char(va_list va)
 {
