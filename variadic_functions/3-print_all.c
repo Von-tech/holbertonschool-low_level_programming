@@ -26,10 +26,12 @@ void t_string(va_list va)
 {
 	char *s = va_arg(va, char *);
 
-	if (s == NULL)
+	if (s == NULL) 
+	{
 		printf("(nil)");
-	else
-		printf("%s", s);
+		return;
+	}
+	printf("%s", s);
 }
 
 void print_all(const char * const format, ...)
