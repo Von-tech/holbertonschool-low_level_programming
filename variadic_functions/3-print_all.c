@@ -67,10 +67,3 @@ void print_all(const char * const format, ...)
 	va_end(valist);
 }
 
-int main(void)
-{
-	print_all("cifs", 'H', 1337, 3.14, "Hello");
-	print_all("s", NULL);
-	return (0);
-}
-
