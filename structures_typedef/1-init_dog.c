@@ -6,7 +6,7 @@
  * @name: the name of the dog
  * @age: The age of the dog
  * @owner: the owner of the dog
- * @new_dog: pointer to the struct dog variable to initialize
+ * @d: pointer to the struct dog variable to initialize
  *
  * Return: void
  */
