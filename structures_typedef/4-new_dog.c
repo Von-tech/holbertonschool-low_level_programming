@@ -1,52 +1,54 @@
+#include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include "dog.h"
 
 /**
- * new_dog - Creates a new dog
- * @name: The name of the dog
- * @age: The age of the dog
- * @owner: The owner of the dog
+ * new_dog - makes new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
  *
- * Return: Pointer to the newly created dog, or NULL if the function fails
+ * Return: a
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog_ptr;
-	char *name_copy, *owner_copy;
 
-	/* Allocate memory for the new dog */
-	new_dog_ptr = malloc(sizeof(dog_t));
-	if (new_dog_ptr == NULL)
-		return NULL;
+	char *name2;
+	char *owner2;
+	int n, o, i, j;
+	struct dog *luna;
 
-	/* Allocate memory for name copy */
-	name_copy = malloc(strlen(name) + 1);
-	if (name_copy == NULL)
+	luna = malloc(sizeof(struct dog));
+	if (luna == NULL)
+		return (NULL);
+	for (n = 0; *(name + n) != '\0'; n++)
+		;
+	for (o = 0; *(owner + o) != '\0'; o++)
+		;
+	name2 = malloc(n + 1);
+	if (name2 != NULL)
 	{
-		free(new_dog_ptr);
-		return NULL;
-	}
-
-	/* Allocate memory for owner copy */
-	owner_copy = malloc(strlen(owner) + 1);
-	if (owner_copy == NULL)
+		for (i = 0; i <= n; i++)
+			*(name2 + i) = *(name + i);
+	} else
 	{
-		free(name_copy);
-		free(new_dog_ptr);
-		return NULL;
+		free(luna);
+		return (NULL);
 	}
+	owner2 = malloc(o + 1);
+	if (owner2 != NULL)
+	{
+		for (j = 0; j <= o; j++)
+			*(owner2 + j) = *(owner + j);
+	} else
+	{
+		free(name2);
+		free(luna);
+		return (NULL);
+	}
+	luna->name = name2;
+	luna->age = age;
+	luna->owner = owner2;
+	return (luna);
 
-	/* Copy name and owner strings */
-	strcpy(name_copy, name);
-	strcpy(owner_copy, owner);
-
-	/* Assign values to the dog's attributes */
-	new_dog_ptr->name = name_copy;
-	new_dog_ptr->age = age;
-	new_dog_ptr->owner = owner_copy;
-
-	return new_dog_ptr;
 }
-
