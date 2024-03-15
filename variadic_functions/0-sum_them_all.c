@@ -4,7 +4,7 @@
  * sum_them_all - adds all args
  * @n: num of args
  * Return: result
- */
+ **/
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list valist;
