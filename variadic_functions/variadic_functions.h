@@ -10,7 +10,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct types - A structure representing a type and its corresponding function
+ * struct types - A structure representing type and its corresponding function
  *
  * @t: The type identifier
  * @f: The function pointer to handle the type
