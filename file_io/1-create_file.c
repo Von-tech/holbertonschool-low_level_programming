@@ -10,32 +10,25 @@
 int create_file(const char *filename, char *text_content)
 {
 	int file, len = 0;
-	struct stat st;
 
 	if (!filename)
-		return (-1);
+	return (-1);
 
 	if (!text_content)
-		text_content = "";
+	text_content = "";
 
 	while (text_content[len])
-		len++;
-
-	if (stat(filename, &st) == 0)
-	{
-		if (!(st.st_mode & S_IWUSR))
-			return (-1);
-	}
+	len++;
 
 	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 
 	if (file == -1)
-		return (-1);
+	return (-1);
 
 	if (write(file, text_content, len) == -1)
 	{
-		close(file);
-		return (-1);
+	close(file);
+	return (-1);
 	}
 
 	close(file);
